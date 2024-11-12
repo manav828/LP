@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Processor Syllabus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Language Processor Syllabus</h1>
+
+        <ol class="chapter-list">
+            <li>
+                <h2>Chapter 1: Introduction to Language Processor</h2>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>1.1 Introduction</summary>
+                            <p>Details about 1.1 Introduction...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>1.2 Language Processing Activities</summary>
+                            <p>Details about 1.2 Language Processing Activities...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>1.3 Fundamentals of Language Processing</summary>
+                            <p>Details about 1.3 Fundamentals of Language Processing...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>1.4 Fundamentals of Language Specification</summary>
+                            <p>Details about 1.4 Fundamentals of Language Specification...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>1.5 Preprocessor, Compiler, and Assembler Overview</summary>
+                            <p>Details about 1.5 Preprocessor, Compiler, and Assembler Overview...</p>
+                        </details>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>Chapter 2: Macros and Macro Preprocessors</h2>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>2.1 Macro Definition and Call</summary>
+                            <p>Details about 2.1 Macro Definition and Call...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>2.2 Macro Expansion and Nested Macro Calls</summary>
+                            <p>Details about 2.2 Macro Expansion and Nested Macro Calls...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>2.3 Design of Macro Preprocessor</summary>
+                            <p>Details about 2.3 Design of Macro Preprocessor...</p>
+                        </details>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>Chapter 3: Finite Automata and Grammar</h2>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>3.1 Basic Definition, Regular Expression, and Regular Language</summary>
+                            <p>A <strong>Regular Language</strong> is a class of formal languages that can be described using regular
+                                expressions or recognized by finite automata. These languages are fundamental in the study of compilers,
+                                interpreters, and automata theory. Regular languages are typically the simplest form of languages that can
+                                be processed by computers and are commonly used in text search, pattern matching, and lexical analysis.</p>
+                    
+                            <h3>Regular Expression (RegEx)</h3>
+                            <p>A <strong>Regular Expression</strong> is a sequence of characters that defines a search pattern. The pattern
+                                specifies the rules for matching strings or sequences of characters. Regular expressions are widely used in
+                                search algorithms, text processing, and validation tasks.</p>
+                    
+                            <h4>Components of Regular Expressions:</h4>
+                            <ul>
+                                <li><strong>Literals</strong>: Characters that match themselves, like `a`, `b`, `1`, `0`.</li>
+                                <li><strong>Metacharacters:</strong>
+                                    <ul>
+                                        <li><strong>.</strong>: Matches any single character (except newline).</li>
+                                        <li><strong>*</strong>: Matches zero or more occurrences of the preceding element.</li>
+                                        <li><strong>+</strong>: Matches one or more occurrences of the preceding element.</li>
+                                        <li><strong>?</strong>: Matches zero or one occurrence of the preceding element.</li>
+                                        <li><strong>[]</strong>: Denotes a set or range of characters, like `[a-z]` for lowercase letters.
+                                        </li>
+                                        <li><strong>|</strong>: OR operator, e.g., `a|b` matches 'a' or 'b'.</li>
+                                        <li><strong>^</strong>: Matches the beginning of a string.</li>
+                                        <li><strong>$</strong>: Matches the end of a string.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    
+                            <h4>Example Regular Expressions:</h4>
+                            <ul>
+                                <li><code>a*b</code>: Matches strings like "b", "ab", "aab", "aaab", etc.</li>
+                                <li><code>[0-9]+</code>: Matches one or more digits (e.g., "123", "456").</li>
+                            </ul>
+                    
+                            <h3>Regular Language</h3>
+                            <p>A <strong>Regular Language</strong> is a language that can be defined using a regular expression and can be
+                                recognized by a Finite Automaton (FA). Regular languages are closed under operations such as union,
+                                intersection, complementation, and concatenation.</p>
+                    
+                            <h4>Characteristics of Regular Languages:</h4>
+                            <ul>
+                                <li><strong>Finite Automaton</strong>: A regular language can be accepted by a Finite Automaton (either
+                                    deterministic or non-deterministic). A finite automaton is a simple computational model that reads input
+                                    symbols one by one and transitions between states according to predefined rules.</li>
+                                <li><strong>Closure Properties</strong>: Regular languages are closed under union, intersection,
+                                    concatenation, and Kleene star (repetition).</li>
+                                <li><strong>Decidability</strong>: Properties like membership testing and equivalence testing are decidable
+                                    for regular languages.</li>
+                            </ul>
+                    
+                            <h4>Examples of Regular Languages:</h4>
+                            <ul>
+                                <li><code>a*</code>: Zero or more 'a' characters.</li>
+                                <li><code>ab|cd</code>: Either "ab" or "cd".</li>
+                                <li><code>[a-z]+</code>: One or more lowercase letters.</li>
+                            </ul>
+                    
+                            <p><strong>Regular languages</strong> are essential for building tools like text search engines, compilers, and
+                                pattern-matching algorithms.</p>
+                        </details>
+                    </li>
+
+                <li>
+                    <details>
+                        <summary>3.2 Finite Automata: NFA and DFA</summary>
+                
+                        <!-- YouTube Video Link -->
+                        <p>Watch this video for a better understanding of NFA and DFA:</p>
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2zlbV5fMtFY" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 -->
+                        <!-- Link to playlist section 6-19 -->
+                        <p>Watch the playlist from video 6 to 19:</p>
+                        <a href="https://www.youtube.com/watch?v=CiXJnosT0UE&list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i&index=6"
+                            target="_blank">Watch Videos 6 to 19</a>
+                
+                        <!-- Detailed Explanation of NFA and DFA -->
+                        <p><strong>Non-deterministic Finite Automaton (NFA):</strong> An NFA is a finite automaton where for each state
+                            and input symbol, the automaton can transition to zero, one, or more states. It may also have epsilon (empty
+                            string) transitions.</p>
+                        <p><strong>Acceptance of Input:</strong> An NFA accepts a string if there is at least one path that leads to an
+                            accepting state after processing all the symbols of the input string.</p>
+                        <p><strong>Advantages of NFA:</strong>
+                        <ul>
+                            <li>More compact representation in some cases.</li>
+                            <li>More flexible in design, often easier to create for certain languages.</li>
+                        </ul>
+                        </p>
+                
+                        <p><strong>Deterministic Finite Automaton (DFA):</strong> A DFA is a finite automaton where for each state and
+                            input symbol, there is exactly one possible transition. This means there is no ambiguity in processing the
+                            input string.</p>
+                        <p><strong>Acceptance of Input:</strong> A DFA accepts a string if, after processing all symbols, it ends in an
+                            accepting state.</p>
+                        <p><strong>Advantages of DFA:</strong>
+                        <ul>
+                            <li>More efficient in execution because there is no ambiguity in transitions.</li>
+                            <li>Easier to implement in practice since it has a clear state for each symbol.</li>
+                        </ul>
+                        </p>
+                
+                        <p><strong>Key Differences Between NFA and DFA:</strong>
+                        <ul>
+                            <li><strong>Determinism:</strong> In a DFA, there is exactly one transition for each state and input symbol,
+                                while in an NFA, there can be multiple transitions for the same input symbol.</li>
+                            <li><strong>State Transitions:</strong> DFAs cannot have epsilon transitions, but NFAs can.</li>
+                            <li><strong>State Space:</strong> An NFA may require fewer states than a DFA for the same language.</li>
+                            <li><strong>Conversion:</strong> Every NFA can be converted into a DFA, though the resulting DFA may have
+                                exponentially more states.</li>
+                        </ul>
+                        </p>
+                
+                    </details>
+                </li>
+
+                    <li>
+                        <details>
+                            <summary>3.3 Conversion from NFA to DFA</summary>
+                           
+                            <p>Watch the playlist video number 16</p>
+                            <a href="https://www.youtube.com/watch?v=LEigAZN6RdY&list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i&index=16"
+                            
+                                target="_blank">Watch Videos 16</a>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>3.4 Minimization of DFA</summary>
+                            <p>Watch the playlist video number 26</p>
+                            <a href="https://www.youtube.com/watch?v=A7eKj_GXam0&list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i&index=26">Watch Videos 26</a>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>3.5 Introduction to Grammar and Types of Grammars</summary>
+                            <p>Details about 3.5 Introduction to Grammar and Types of Grammars...</p>
+                            
+                            <p>Watch the playlist video number 5</p>
+                        <a href="https://www.youtube.com/watch?v=5Jd54dxQ1_Q&list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i&index=5"
+                            target="_blank">Watch Videos 5</a>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>3.6 Context-Free Grammars and Derivations</summary>
+                            <p>Details about 3.6 Context-Free Grammars and Derivations...</p>
+                            <a href="https://www.youtube.com/watch?v=78K913GS8U4&list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i&index=46"
+                                target="_blank">Watch Videos 46 to 49</a>
+                                https://www.youtube.com/watch?v=iL6YrS_f1YM&list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i&index=64
+                        </details>
+                    </li>
+                <li>
+                    <details>
+                        <summary>3.7 Relationship Between Derivation and Derivation Trees</summary>
+                
+                        <p><strong>What is a Derivation?</strong></p>
+                        <p>A <strong>derivation</strong> is a step-by-step process where we start with a special symbol (called the
+                            "start symbol") of a grammar and use its rules to create a string made up of terminals (the basic symbols of
+                            the language).</p>
+                        <p>In simple terms, a derivation shows how we build a string from the start symbol, applying rules one by one.
+                            Each step replaces a non-terminal (a symbol that can be broken down further) with one of its rules until we
+                            reach a string of terminals.</p>
+                
+                        <p><strong>Example of a Derivation:</strong></p>
+                        <p>Let’s consider a grammar with the following rule:</p>
+                        <pre>
+                        S → aSb | ε
+                        </pre>
+                        <p>This means that the start symbol <strong>S</strong> can be replaced by either <strong>aSb</strong> or
+                            <strong>ε</strong> (which represents an empty string).</p>
+                
+                        <p>If we want to derive the string <strong>aabb</strong>, here’s how the derivation would go:</p>
+                        <pre>
+                        S → aSb      (First, we replace S with aSb)
+                        → aaSbb      (Next, we replace S with aSb again)
+                        → aabbb      (Now, replace S with ε, which is an empty string)
+                        → aabb       (Finally, we get the desired string)
+                        </pre>
+                
+                        <p><strong>What is a Derivation Tree?</strong></p>
+                        <p>A <strong>derivation tree</strong> (also called a "parse tree") is a diagram that shows how a string is
+                            derived from the start symbol using the rules of the grammar. Instead of writing it as a list of steps, we
+                            draw it as a tree, where each node represents a non-terminal and the branches show how non-terminals are
+                            replaced by other non-terminals or terminals.</p>
+                
+                        <p><strong>Example of a Derivation Tree for "aabb":</strong></p>
+                        <pre>
+                                S
+                              /   \
+                             a     S
+                                  /   \
+                                 a     S
+                                      / \
+                                     ε   b
+                        </pre>
+                        <p>In this tree:
+                        <ul>
+                            <li>The root (top node) is <strong>S</strong>, the start symbol.</li>
+                            <li>Each branch represents applying a production rule to replace a non-terminal.</li>
+                            <li>The leaves (bottom nodes) are the terminals, which are the symbols we want in our final string (in this
+                                case, <strong>aabb</strong>).</li>
+                        </ul>
+                        </p>
+                
+                        <p><strong>Relationship Between Derivation and Derivation Tree:</strong></p>
+                        <p>The derivation is the process of applying rules step-by-step to create a string. The derivation tree is a
+                            visual representation of this process. Each derivation can be represented as a tree, where the structure of
+                            the tree corresponds to the order in which rules are applied.</p>
+                
+                        <p><strong>Example:</strong> In the derivation we saw earlier:</p>
+                        <pre>
+                        S → aSb → aaSbb → aabbb → aabb
+                        </pre>
+                        This can be represented in the tree structure we saw earlier, where the rules are applied as we move from the
+                        root to the leaves.</p>
+                
+                        <p><strong>Ambiguity:</strong></p>
+                        <p>If a grammar can generate a string in more than one way, it means the grammar is <strong>ambiguous</strong>.
+                            In such cases, there will be multiple derivations and multiple derivation trees for the same string.</p>
+                        <p>For example, if a string can be derived using two different sets of production rules, there will be two
+                            different derivation trees representing the same string.</p>
+                
+                        <p><strong>In Summary:</strong></p>
+                        <ul>
+                            <li>A derivation is a sequence of rule applications that generates a string.</li>
+                            <li>A derivation tree is a tree structure that represents this sequence visually.</li>
+                            <li>Each derivation has a unique derivation tree.</li>
+                            <li>If a grammar is ambiguous, it can generate multiple derivation trees for the same string.</li>
+                        </ul>
+                    </details>
+                </li>
+
+                    <li>
+                        <details>
+                            <summary>3.8 BNF, CNF, GNF</summary>
+                            <p>Details about 3.8 BNF, CNF, GNF...</p>
+                            <a href="https://www.youtube.com/watch?v=iL6YrS_f1YM&list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i&index=64"
+                                target="_blank">Watch Videos 64</a>
+                            
+                        </details>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>Chapter 4: Analysis Phase of Compiler</h2>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>4.1 Introduction to Lexical Analysis</summary>
+                            <p>Details about 4.1 Introduction to Lexical Analysis...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>4.2 Role of Lexical Analyzer</summary>
+                            <p>Details about 4.2 Role of Lexical Analyzer...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>4.3 Specification and Recognition of Tokens</summary>
+                            <p>Details about 4.3 Specification and Recognition of Tokens...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>4.4 Lexical Analyzer Generators</summary>
+                            <p>Details about 4.4 Lexical Analyzer Generators...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>4.5 Role of the Parser</summary>
+                            <p>Details about 4.5 Role of the Parser...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>4.6 Top-down Parsing</summary>
+                            <p>Details about 4.6 Top-down Parsing...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>4.7 Bottom-up Parsing</summary>
+                            <p>Details about 4.7 Bottom-up Parsing...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>4.8 Syntax-Directed Definitions</summary>
+                            <p>Details about 4.8 Syntax-Directed Definitions...</p>
+                        </details>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>Chapter 5: Synthesis Phase of Compiler</h2>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>5.1 Intermediate Languages and Declarations</summary>
+                            <p>Details about 5.1 Intermediate Languages and Declarations...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>5.2 Intermediate Code Generation Techniques</summary>
+                            <p>Details about 5.2 Intermediate Code Generation Techniques...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>5.3 Optimization Techniques</summary>
+                            <p>Details about 5.3 Optimization Techniques...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>5.4 Issues in Code Generator Design</summary>
+                            <p>Details about 5.4 Issues in Code Generator Design...</p>
+                        </details>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>Chapter 6: Assemblers</h2>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>6.1 Elements of Assembly Language Programming</summary>
+                            <p>Details about 6.1 Elements of Assembly Language Programming...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>6.2 Overview of the Assembly Process</summary>
+                            <p>Details about 6.2 Overview of the Assembly Process...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>6.3 A Simple Assembly Scheme</summary>
+                            <p>Details about 6.3 A Simple Assembly Scheme...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>6.4 Design of Two-Pass Assembler</summary>
+                            <p>Details about 6.4 Design of Two-Pass Assembler...</p>
+                        </details>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=SlSA9vEXCm4&list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i&index=48"
+                            target="_blank">6.5 Watch YouTube Video 1</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=Ov1N3UJEe28&list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i&index=49"
+                            target="_blank">6.6 Watch YouTube Video 2</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ol>
+    </div>
+
+</body>
+
+</html>
